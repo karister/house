@@ -12,5 +12,8 @@
   "bugs": {
     "url": "https://github.com/lx164/house/issues"
   },
-  "engines": {}
+  "engines": {},
+  "dependencies": {
+    "@vant/weapp": "^1.10.8"
+  }
 }

@@ -3,6 +3,6 @@
   "navigationBarBackgroundColor": "#FFF",
   "navigationBarTextStyle":"black",
   "usingComponents": {
-    "van-card": "../../dist/card/index"
+    "van-card": "@vant/weapp/card/index"
   }
 }

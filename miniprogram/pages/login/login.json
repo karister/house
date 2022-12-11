@@ -3,6 +3,6 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationStyle": "custom",
     "usingComponents": {
-        "van-nav-bar": "../../dist/nav-bar/index"
+        "van-nav-bar": "@vant/weapp/nav-bar/index"
     }
 }
