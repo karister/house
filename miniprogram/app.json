@@ -18,7 +18,9 @@
                 "Recommend/Recommend",
                 "StaffInfo/StaffInfo",
                 "companyInfo/companyInfo",
-                "scanPage/scanPage"
+                "scanPage/scanPage",
+                "modifySwiperImg/modifySwiperImg",
+                "modifySwiperImg"
             ]
         },
         {

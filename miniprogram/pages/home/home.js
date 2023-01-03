@@ -16,13 +16,13 @@ Page({
             {
                 "id": "#",
                 "icon": "../image/qualifications.png",
-                "text": "公司资质",
+                "text": "关于平台",
                 "url": "../../Companypackage/qualification/qualification"
             },
             {
                 "id": "#",
                 "icon": "../image/relation.png",
-                "text": "联系员工",
+                "text": "代租受理",
                 "url": "../../Companypackage/Contact/Contact"
             }
         ],
@@ -32,6 +32,8 @@ Page({
         total: 0,
         // 默认查询第一页
         page: 0,
+        // 默认轮播图
+        swiperImgs: ['../image/banner.png','../image/banner.png','../image/banner.png'],
         // 默认公告信息
         notice:'欢迎使用 邦房-团结南路店 这里有大量的好房源等您来挑选~ 同时也欢迎发布你的房源信息到这里来~'
     },
@@ -80,8 +82,8 @@ Page({
         var that = this
         wx.getSetting({
             success(res) {
-                console.log(res)
-                if (res.authSetting['scope.userInfo']) {
+                console.log('home page res:', res)
+                if (res.authSetting['scope.address']) {
                     wx.getUserInfo({
                         success: function (res) {
                             // console.log(res)

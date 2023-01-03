@@ -25,9 +25,12 @@
 </view>
 
 <!-- bannner -->
-<view class="banner-box">
-	<image src="../image/banner.png"></image>
-</view>
+<swiper class="banner-box" indicator-dots autoplay interval="2000" circular
+	indicator-active-color="#ffffff" indicator-color="rgba(0, 0, 0, .3)"> 
+    <swiper-item wx:for="{{swiperImgs}}" wx:key="key">
+        <image src="{{item}}"></image>
+    </swiper-item>
+</swiper>
 
 <!-- 公告 -->
 <view class="noticeBar-box">
@@ -35,7 +38,7 @@
 </view>
 
 <view class="recommendation-box">
-	<view class="recommendation-text">店长推荐</view>
+	<view class="recommendation-text">今日推荐</view>
 </view>
 
 <!-- 推荐列表 -->
