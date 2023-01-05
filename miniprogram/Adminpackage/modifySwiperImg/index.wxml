@@ -23,7 +23,7 @@
         style="width: 200rpx;height: 150rpx;margin-left: 18rpx;border: 2rpx solid {{image.borderColor}};"
         wx:for="{{pro.imageObject}}" wx:key="key" wx:for-item="image" wx:for-index="imageIndex"
         src="{{image.url}}"
-        bindtap="viewImage"
+        bindtap="previewImage"
         data-imageindex="{{imageIndex}}"
         data-index="{{proIndex}}"
         bindlongpress="editImage"

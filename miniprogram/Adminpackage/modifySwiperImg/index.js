@@ -36,6 +36,26 @@ Page({
     ]
   },
 
+
+  filterEmptyImage(sourceImg) {
+    return sourceImg.filter(image => image && image.trim())
+  },
+
+  /**
+   * 
+   * @param {点击预览图片的索引} event 
+   */
+  previewImage(event) {
+    let that = this;
+    let project = that.data.project;
+    let proIndex = event.currentTarget.dataset.index;
+    let imageIndex = event.currentTarget.dataset.imageindex;
+    wx.previewImage({
+      urls: that.filterEmptyImage(project[proIndex].imageList),
+      current: project[proIndex].imageList[imageIndex]
+    })
+  },
+
   /**
    * 取消选中的图片
    * @param {event.currentTarget.dataset.index: 当前上传的项目索引} event 
@@ -63,18 +83,22 @@ Page({
     let that = this;
     let proIndex = event.currentTarget.dataset.index;
     let imageIndex = event.currentTarget.dataset.imageindex;
+    let selectIndex = that.data.project[proIndex].selectIndex;
     let imageObject = that.data.project[proIndex].imageObject;
     let project = that.data.project;
-    if(that.data.project[proIndex].disabled) {
-        imageObject[imageIndex].borderColor = that.data.selectedColor;
-        project[proIndex] = {
-          ...project[proIndex],
-          imageObject,
-          selectIndex: imageIndex,
-          empty: false
-        }
-        that.setData({project})
+
+    //已有选中,取消已选中更新新选中
+    if(!that.data.project[proIndex].disabled) {
+      imageObject[selectIndex].borderColor = that.data.normalColor;
     }
+    imageObject[imageIndex].borderColor = that.data.selectedColor;
+    project[proIndex] = {
+      ...project[proIndex],
+      imageObject,
+      selectIndex: imageIndex,
+      disabled: false
+    }
+    that.setData({project})
   },
 
   /**
