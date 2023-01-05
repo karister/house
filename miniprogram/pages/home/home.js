@@ -1,4 +1,6 @@
 // pages/home/home.js
+const db = wx.cloud.database();
+const _ = db.command;
 var app = getApp()
 Page({
 
@@ -38,10 +40,23 @@ Page({
         notice:'欢迎使用 邦房-团结南路店 这里有大量的好房源等您来挑选~ 同时也欢迎发布你的房源信息到这里来~'
     },
 
+    getSwiperImages() {
+      db.collection('indexImage').where({
+        filed: 'swiper'
+      }).get().then( res => { 
+        const resImageList = res.data[0].imageList.filter(image => image && image.trim())
+        console.log(resImageList)
+        this.setData({
+          swiperImgs: resImageList
+        })
+      })
+    },
+
     /** 
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        this.getSwiperImages()
         console.log('onload')
         // 删除本地缓存
         wx.removeStorageSync('userInfo')

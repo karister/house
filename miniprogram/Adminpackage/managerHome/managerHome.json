@@ -1,4 +1,7 @@
 {
   "navigationBarTitleText": "管理员主页",
-  "usingComponents": {}
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index"
+  }
+  
 }

@@ -24,3 +24,7 @@
 	<!-- 设置管理员 -->
 	<image src="../images/5.png"></image>
 </view>
+
+<view class="function-button" wx:for="{{functionInfo}}" wx:key='key' data-url="{{item.url}}"  bindtap="Navigate">
+    <van-button plain round block type="primary">{{item.text}}</van-button>
+</view>

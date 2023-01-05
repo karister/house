@@ -94,7 +94,7 @@ Page({
         let TapAccount = this.data.TapAccount
         TapAccount = TapAccount + 1
         console.log(TapAccount)
-        if (TapAccount < 5) {
+        if (TapAccount < 1) {
             this.setData({
                 TapAccount: TapAccount
             })

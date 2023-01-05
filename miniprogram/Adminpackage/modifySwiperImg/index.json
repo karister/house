@@ -1,0 +1,19 @@
+{
+    "usingComponents": {
+      "van-uploader": "@vant/weapp/uploader/index",
+      "van-sidebar": "@vant/weapp/sidebar/index",
+      "van-sidebar-item": "@vant/weapp/sidebar-item/index",
+      "van-tab": "@vant/weapp/tab/index",
+      "van-tabs": "@vant/weapp/tabs/index",
+      "van-button": "@vant/weapp/button/index",
+      "van-empty": "@vant/weapp/empty/index",
+      "van-toast": "@vant/weapp/toast/index",
+      "van-action-sheet": "@vant/weapp/action-sheet/index",
+      "van-loading": "@vant/weapp/loading/index"
+    },
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "首页图片管理",
+    "navigationBarTextStyle": "black"
+  }

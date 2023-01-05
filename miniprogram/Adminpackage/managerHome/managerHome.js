@@ -5,7 +5,17 @@ Page({
      * 页面的初始数据
      */
     data: {
-        Adminstator: false
+        Adminstator: false,
+        functionInfo: [
+            {
+                text: '修改首页轮播图',
+                url: '../modifySwiperImg/index'
+            },
+            {
+                text: '修改首页轮播图1',
+                url: '../modifySwiperImg/index'
+            }
+        ]
     },
 
     /**

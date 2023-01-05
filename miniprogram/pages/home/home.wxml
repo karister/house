@@ -25,8 +25,7 @@
 </view>
 
 <!-- bannner -->
-<swiper class="banner-box" indicator-dots autoplay interval="2000" circular
-	indicator-active-color="#ffffff" indicator-color="rgba(0, 0, 0, .3)"> 
+<swiper class="banner-box" autoplay interval="2000" circular easing-function="easeInOutCubic"> 
     <swiper-item wx:for="{{swiperImgs}}" wx:key="key">
         <image src="{{item}}"></image>
     </swiper-item>
